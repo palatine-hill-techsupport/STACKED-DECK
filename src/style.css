@@ -1,0 +1,397 @@
+/* Defautls and wrapper */
+
+html, body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  font-family: 'Roboto', sans-serif;
+  background-color: #121212;
+  color: #f0f0f0;
+}
+
+.page-wrapper {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.page-wrapper > * {
+  flex: 1 0 auto;
+}
+
+/* Products */
+
+.products-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 2rem;
+  padding: 2rem;
+}
+
+.game-card {
+  background-color: #1f1f1f;
+  border-radius: 12px;
+  box-shadow: 0 0 12px rgba(0, 0, 0, 0.5);
+  width: 300px;
+  padding: 1.5rem;
+  text-align: center;
+  transition: transform 0.2s ease;
+  max-width: 500px;
+  margin-top: 2rem;
+}
+
+.game-card:hover {
+  transform: scale(1.02);
+}
+
+.game-card img {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+  margin-bottom: 1rem;
+}
+
+.game-card h2 {
+  font-size: 1.6rem;
+  margin-bottom: 0.5rem;
+  color: #FFD700;
+  font-family: 'Bebas Neue', sans-serif;
+  letter-spacing: 0.5px;
+}
+
+.game-card .description {
+  font-size: 0.9rem;
+  margin-bottom: 1rem;
+  color: #cccccc;
+  font-family: 'Roboto', sans-serif;
+}
+
+.game-card .price {
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #33dd99;
+  margin-bottom: 0.5rem;
+}
+
+.game-card .score {
+  font-size: 0.9rem;
+  color: #999999;
+}
+
+.carousel-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  padding: 2rem 2rem 0 2rem;
+  margin: 0 5rem;
+  gap: 2rem;
+}
+
+.carousel {
+  flex: 3;
+  display: flex;
+  height: 100%;
+  overflow-x: auto;
+  gap: 1rem;
+  padding-bottom: 1rem;
+  scroll-snap-type: x mandatory;
+  scroll-behavior: smooth;
+  scrollbar-width: none;
+}
+
+.carousel::-webkit-scrollbar {
+  display: none;
+}
+
+.carousel-slide {
+  flex: 0 0 auto;
+  height: 100%;
+  width: 100%;
+  border-radius: 12px;
+  background-color: #1f1f1f;
+  position: relative;
+  scroll-snap-align: start;
+  box-shadow: 0 0 8px rgba(0, 0, 0, 0.3);
+}
+
+.carousel-slide img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 12px;
+}
+
+.carousel-title {
+  position: absolute;
+  bottom: 0.5rem;
+  left: 0.5rem;
+  z-index: 2;
+  background: rgba(0, 0, 0, 0.8);
+  padding: 0.3rem 0.7rem;
+  border-radius: 8px;
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: 1.6rem;
+  color: #f0f0f0;
+}
+
+.carousel-price {
+  position: absolute;
+  bottom: 0.5rem;
+  right: 0.5rem;
+  background: rgba(0, 0, 0, 0.8);
+  padding: 0.3rem 0.7rem;
+  border-radius: 8px;
+  color: #FFD700;
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: 2rem;
+}
+
+.promo-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: #1a1a1a;
+  color: #f0f0f0;
+  border-radius: 12px;
+  text-align: center;
+  height: 100%;
+  box-sizing: border-box;
+  padding: 2rem;
+}
+
+.promo-icon {
+  width: 175px;
+  height: auto;
+  margin-bottom: 1rem;
+}
+
+.promo-card h2 {
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: 2.5rem;
+  color: #FFD700;
+  margin-bottom: 1rem;
+}
+
+.promo-button {
+  display: inline-block;
+  margin-top: 1rem;
+  padding: 1rem 2rem;
+  background-color: #FFD700;
+  color: #000;
+  font-size: 1.5rem;
+  font-weight: bold;
+  text-decoration: none;
+  border-radius: 8px;
+  font-family: 'Bebas Neue', sans-serif;
+  letter-spacing: 0.5px;
+  transition: background 0.3s ease;
+}
+
+.promo-button:hover {
+  background-color: #ffaa00;
+}
+
+/* Header */
+
+.site-header {
+  background-color: #8E24AA;
+  padding: 1rem 2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: white;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  color: #FFD700;
+  font-size: 2.2rem;
+  font-weight: bold;
+  font-family: 'Bebas Neue', sans-serif;
+}
+
+.logo span:hover {
+  color: white;
+}
+
+.logo-icon {
+  height: 50px;
+  width: auto;
+}
+
+.nav-links {
+  display: flex;
+  gap: 1.5rem;
+}
+
+.nav-links a {
+  color: white;
+  text-decoration: none;
+  font-size: 1.5rem;
+  font-weight: bold;
+  font-family: 'Bebas Neue', sans-serif;
+  letter-spacing: 0.5px;
+  transition: color 0.2s ease;
+}
+
+.nav-links a:hover {
+  color: #FFD700;
+}
+
+/* Footer */
+
+.site-footer {
+  background-color: #0a0a0a;
+  margin-top: auto;
+  color: #888;
+  text-align: center;
+  padding: 1rem;
+  font-size: 0.9rem;
+}
+
+.site-footer a.footer-link {
+  color: #888;
+  text-decoration: underline;
+  font-style: italic;
+  transition: color 0.2s ease;
+}
+
+.site-footer a.footer-link:hover {
+  color: #FFD700;
+}
+
+/* Lootbox */
+
+.lootbox-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  padding: 2rem;
+}
+
+.lootbox-container .game-card {
+  width: 375px;
+  padding: 2rem;
+}
+
+.booster-icon {
+  height: 300px;
+  width: auto;
+  display: block;
+  margin-bottom: 1rem;
+}
+
+.lootbox-container .game-card h2 {
+  font-size: 2rem;
+}
+
+.lootbox-container .game-card .description {
+  font-size: 1rem;
+}
+
+.game-card large-card .price {
+  font-size: 2rem;
+}
+
+.lootbox-container .game-card .score {
+  font-size: 1rem;
+}
+
+.lootbox-container .game-card img {
+  max-height: 220px;
+}
+
+.roll-again {
+  display: inline-block;
+  margin-top: 1.5rem;
+  padding: 1rem 2rem;
+  background-color: #ffcc00;
+  color: #000;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 1.5rem;
+  border-radius: 8px;
+  transition: background 0.3s ease;
+  font-family: 'Bebas Neue', sans-serif;
+  letter-spacing: 0.5px;
+}
+
+.roll-again:hover {
+  background-color: #ffaa00;
+}
+
+.roll-score {
+  font-weight: bold;
+  margin-top: 1rem;
+  font-size: 1.2rem;
+  font-family: 'Bebas Neue', sans-serif;
+}
+
+.roll-score.legendary {
+  color: #FFD700;
+}
+
+.roll-score.epic {
+  color: #7B68EE; 
+}
+
+.roll-score.rare {
+  color: #1E90FF;
+}
+
+.roll-score.common {
+  color: #888;
+}
+
+.roll-score.basic {
+  color: #cc3333;
+}
+
+.countdown-display {
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: 3rem;
+  color: var(--gold);
+  text-align: center;
+  margin-top: 1rem;
+  display: none;
+}
+
+@keyframes flash {
+  0%, 100% { opacity: 0; transform: scale(1.2); }
+  50% { opacity: 1; transform: scale(1); }
+}
+
+/* ToS */
+
+.tos-page {
+  display: flex;
+  justify-content: center;
+  padding: 3rem 1rem;
+  background-color: #121212;
+  color: #e0e0e0;
+  font-family: 'Roboto', sans-serif;
+}
+
+.tos-container {
+  max-width: 800px;
+  line-height: 1.7;
+}
+
+.tos-container h1,
+.tos-container h2 {
+  font-family: 'Bebas Neue', sans-serif;
+  color: #FFD700;
+}
+
+.tos-container a {
+  color: #FFD700;
+  text-decoration: underline;
+}
